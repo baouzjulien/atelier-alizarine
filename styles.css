@@ -22,6 +22,23 @@
   color: var(--alizarine-hover) !important;
   border-bottom-color: var(--alizarine-hover); /* on change juste la couleur */
 }
+/* Fond du menu déroulant */
+.dropdown-menu {
+  background-color: #fff; /* ou bordeaux si tu veux un fond coloré */
+  border: 1px solid var(--alizarine);
+}
+
+/* Liens du dropdown */
+.dropdown-item {
+  color: var(--alizarine); /* texte rouge comme le reste du nav */
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+/* Hover sur les items */
+.dropdown-item:hover {
+  color: #fff; /* texte blanc */
+  background-color: var(--alizarine-hover); /* fond rouge foncé */
+}
 
 .page {
     height: auto;       /* laisse la section s’adapter au contenu */
@@ -45,14 +62,15 @@
 
 #accueil-alizarine {
     padding-top: 60px;
-    background-image: url("/atelier-Alizarine/media/img/chevaux\ peinture.jpg"); /* chemin vers ton image */
-    background-size: cover;       /* l’image couvre toute la zone */
-    background-position: center;  /* centrée */
-    height: 100vh;                /* occupe toute la hauteur de l’écran */
+    background-image: url("/atelier-Alizarine/media/img/chevaux\ peinture.jpg");
+    background-size: 80% auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;                 /* texte lisible sur l’image */
+    color: white;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
 }
 
@@ -68,10 +86,16 @@ body, .navbar, p {
   font-family: 'Montserrat', sans-serif;
 }
 a {
-  color: var(--alizarine);
+  color: #B22222;
 }
 a:hover {
-  color: #B22222;
+  color: var(--alizarine);
+}
+hr {
+  color: var(--alizarine);
+  width: 300px;
+  margin: auto;
+  padding-bottom: 30px;
 }
 
 
@@ -90,6 +114,7 @@ a:hover {
 
 #groupe-img {
     max-width:500px;
+    border: 2.5px solid var(--alizarine);
 }
 
 #historique-img {
@@ -103,6 +128,8 @@ a:hover {
 .card {
   border: 1px solid rgba(227, 38, 54, 0.3);
   box-shadow: 0 4px 12px rgba(227, 38, 54, 0.15);
+  background-color: rgb(213, 129, 129);
+  color: whitesmoke;
 }
 
 .text-muted{
