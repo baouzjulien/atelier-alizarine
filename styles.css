@@ -1,12 +1,40 @@
+:root {
+  --alizarine: #E32636;
+  --alizarine-hover: #e81a2c;
+}
+
+.navbar {
+  background: linear-gradient(to bottom, rgba(227,38,54,0.05), #fff);
+}
+
+.navbar-brand {
+  color: var(--alizarine) !important;
+  font-weight: bold;
+}
+
+.navbar-nav .nav-link {
+  color: var(--alizarine) !important;
+  border-bottom: 1px solid transparent; /* espace réservé */
+  transition: color 0.3s ease, border-bottom-color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: var(--alizarine-hover) !important;
+  border-bottom-color: var(--alizarine-hover); /* on change juste la couleur */
+}
+
 .page {
     height: auto;       /* laisse la section s’adapter au contenu */
     min-height: 100vh;  /* garde un minimum de hauteur */
     padding-top: 60px;
+    background: linear-gradient(to bottom, rgba(227,38,54,0.05), #fff);
+
 }
 
 .page-end {
     padding-top: 60px;
     min-height: 90vh;
+    background: linear-gradient(to bottom, rgba(227,38,54,0.05), #fff);
 }
 
 .page-content {
@@ -17,7 +45,7 @@
 
 #accueil-alizarine {
     padding-top: 60px;
-    background-image: url("media/img/chevaux\ peinture.jpg"); /* chemin vers ton image */
+    background-image: url("/atelier-Alizarine/media/img/chevaux\ peinture.jpg"); /* chemin vers ton image */
     background-size: cover;       /* l’image couvre toute la zone */
     background-position: center;  /* centrée */
     height: 100vh;                /* occupe toute la hauteur de l’écran */
@@ -30,7 +58,22 @@
 
 h1 {
     font-size: 4rem !important;
+    font-family: 'Playfair Display', serif;
 }
+h2, h3 {
+  font-family: 'Playfair Display', serif;
+   color: var(--alizarine);
+}
+body, .navbar, p {
+  font-family: 'Montserrat', sans-serif;
+}
+a {
+  color: var(--alizarine);
+}
+a:hover {
+  color: #B22222;
+}
+
 
 .img-thumbnail {
     width: 220px;        /* largeur fixe */
@@ -57,17 +100,17 @@ h1 {
   border-radius: .25rem 0 0 .25rem; /* haut gauche arrondi, bas gauche carré */
 }
 
+.card {
+  border: 1px solid rgba(227, 38, 54, 0.3);
+  box-shadow: 0 4px 12px rgba(227, 38, 54, 0.15);
+}
 
 .text-muted{
-    font-size: 0._rem;
+    font-size: 0.8rem;
 }
 
 .span-rs-link {
     font-size: 0.8rem;
-}
-
-#galerie {
-    background: linear-gradient(to bottom, #e9ecef, #dee2e6);
 }
 
 .galerie-img {
@@ -75,10 +118,6 @@ h1 {
   flex-wrap: wrap;
   justify-content: center; /* centre horizontalement */
   gap: 10px;               /* espace entre les images (optionnel si tu utilises déjà margin) */
-}
-
-#contact {
-    background: linear-gradient(to bottom, #e9ecef, #dee2e6);
 }
 
 .lightbox {
@@ -140,6 +179,11 @@ h2, h3 {
   text-align:center;
   max-width: 800px;
   margin: auto;
+  padding-bottom: 30px;
+}
+footer {
+  background: linear-gradient(to bottom, rgba(227,38,54,0.05), #fff);
+  border-top: 1px solid #e3263649;
 }
 
 
