@@ -1,10 +1,13 @@
 .page {
-    height: 100vh;
+    height: auto;       /* laisse la section s’adapter au contenu */
+    min-height: 100vh;  /* garde un minimum de hauteur */
     padding-top: 60px;
 }
 
 .page-content {
+    width: 90%;
     padding: 10px;
+    margin: auto;
 }
 
 #accueil-alizarine {
@@ -18,6 +21,27 @@
     justify-content: center;
     color: white;                 /* texte lisible sur l’image */
     text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}
+
+.img-thumbnail {
+    width: 220px;        /* largeur fixe */
+    height: 220px;       /* hauteur fixe */
+    object-fit: cover;   /* recadre l’image sans la déformer */
+    margin: 5px;
+    transition: transform 0.3s ease; /* transition douce */
+}
+
+.img-thumbnail:hover{
+    transform: scale(1.05); /* léger grossissement (5%) */
+    cursor: pointer;
+}
+
+#groupe-img {
+    max-width:500px;
+}
+
+#blason-img {
+    max-width: 150px;
 }
 
 .card img {
@@ -37,8 +61,69 @@
     background: linear-gradient(to bottom, #e9ecef, #dee2e6);
 }
 
+.galerie-img {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* centre horizontalement */
+  gap: 10px;               /* espace entre les images (optionnel si tu utilises déjà margin) */
+}
+
+#galerie>.page-content>h2 {
+    text-align: center;
+}
+
+
 #contact {
     background: linear-gradient(to bottom, #e9ecef, #dee2e6);
+}
+
+.lightbox {
+  display: none;              /* caché par défaut */
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.8); /* fond noir transparent */
+  justify-content: center;
+  align-items: center;
+}
+
+.lightbox-content {
+  max-width: 90%;
+  max-height: 80%;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #f8f9fa;
+  border-top: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+  z-index: 10000;
+}
+.cookie-banner p {
+  margin: 0 0 8px 0;
+}
+
+h2 {
+    margin-bottom: 1.5rem;
 }
 
 /* Limite la taille des images sur petits écrans */
@@ -56,6 +141,11 @@
   .card img {
     border-radius: .25rem .25rem 0 0; /* équivalent de rounded-top */
   }
+  .page-content {
+    width: 100%;
+    padding: 10px;
+    margin: auto;
+}
 
 }
 
