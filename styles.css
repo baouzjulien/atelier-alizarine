@@ -236,7 +236,7 @@ footer {
 
   #historique-img {
     width: 100%;
-    height: 240px;  /* override img-fluid */
+    height: 240px;
     object-fit: cover;
     display: block;
     border-radius: 5px 5px 0 0 !important;
@@ -280,3 +280,43 @@ p {
 }
 }
 
+@media (min-width: 1300px) {
+  #galerie>.page-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .galerie-img {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 1300px) and (min-width: 577px) {
+#accueil-alizarine {
+    background-image: url("/atelier-Alizarine/media/img/chevaux\ peinture.jpg");
+    background-size: 200%;
+    background-position: -250px center;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}
+#historique-img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    display: block;
+    border-radius: 5px 5px 0 0 !important;
+  }
+}
+
+@media (max-width: 1020px) and (min-width: 768px) {
+  /* Tes styles ici */
+  #img-evnmt {
+    width: 200%;
+    height: 450px;
+    object-fit: cover;
+  }
+}
