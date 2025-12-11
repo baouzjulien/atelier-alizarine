@@ -50,7 +50,7 @@
 
 .page-end {
     padding-top: 60px;
-    min-height: 90vh;
+    min-height: 50vh;
     background: linear-gradient(to bottom, rgba(227,38,54,0.05), #fff);
 }
 
@@ -119,7 +119,11 @@ hr {
 }
 
 #historique-img {
-    max-width: 200px;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px 0 0 5px !important; /* arrondi seulement à gauche */
+    object-fit: cover;
+    display: block;
 }
 
 .card img {
@@ -217,21 +221,31 @@ footer {
 
 /* Limite la taille des images sur petits écrans */
 @media (max-width: 576px) {
+
+  #accueil-alizarine {
+    background-image: url("/atelier-Alizarine/media/img/chevaux\ peinture.jpg");
+    background-size: 280%;
+    background-position: -200px center;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}
+
   #historique-img {
-    height: 200px;
-    width: 200px;
-    border-radius: 5px;
+    width: 100%;
+    height: 240px;  /* override img-fluid */
     object-fit: cover;
     display: block;
-    margin: 0 auto;   /* centre l’image */
+    border-radius: 5px 5px 0 0 !important;
   }
   .page {
     height: auto;       /* laisse la section s’adapter au contenu */
     min-height: 100vh;  /* garde un minimum de hauteur */
   }
-  .card img {
-    border-radius: .25rem .25rem 0 0; /* équivalent de rounded-top */
-  }
+  
   .page-content {
     width: 100%;
     padding: 10px;
@@ -249,8 +263,20 @@ footer {
     height: auto;
     border: 2.5px solid var(--alizarine);
 }
+footer {
+  font-size: 0.8rem;
+}
 h1 {
     font-size: 2.5rem !important;
+}
+h5{
+  font-size: 1rem;
+}
+.card-body>ul>li {
+  font-size: 0.9rem;
+}
+p {
+  font-size: 0.8rem;
 }
 }
 
