@@ -108,6 +108,10 @@ hr {
   padding-bottom: 30px;
 }
 
+.pt-3, .intro-evenement{
+  text-align: center;
+}
+
 /* ================= IMAGES ================= */
 .img-thumbnail {
   width: 220px;
@@ -311,6 +315,14 @@ footer {
   p {
     font-size: 0.8rem;
   }
+
+  #toggle-images {
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    
+  }
+
 }
 
 @media (min-width: 1300px) {
