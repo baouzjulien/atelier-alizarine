@@ -229,35 +229,47 @@ footer {
   gap: 5px;
 }
 
+/* Traits du toggler */
 .toggler-icon {
   width: 30px;
   height: 3px;
-  background-color: var(--alizarine);
+  background-color: var(--alizarine); /* couleur par défaut */
   transition: all 0.3s ease;
 }
 
-/* Quand le menu est OUVERT (Bootstrap enlève .collapsed) */
+/* ----- ÉTAT FERMÉ ----- */
+.navbar-toggler.collapsed .top-bar,
+.navbar-toggler.collapsed .middle-bar,
+.navbar-toggler.collapsed .bottom-bar {
+  transform: rotate(0) translateY(0);
+  opacity: 1; /* barre du milieu visible */
+  background-color: var(--alizarine); /* traits droits */
+}
+
+/* ----- ÉTAT OUVERT (croix) ----- */
 .navbar-toggler:not(.collapsed) .top-bar {
   transform: translateY(8px) rotate(45deg);
 }
 
 .navbar-toggler:not(.collapsed) .middle-bar {
-  opacity: 0;
+  opacity: 0; /* barre du milieu disparaît */
 }
 
 .navbar-toggler:not(.collapsed) .bottom-bar {
   transform: translateY(-8px) rotate(-45deg);
 }
 
-/* Optionnel : couleur rouge quand ouvert */
+/* couleur du X ouvert */
 .navbar-toggler:not(.collapsed) .toggler-icon {
-  background-color: rgb(0, 0, 0);
+  background-color: rgb(0, 0, 0); /* noir ou ce que tu veux */
 }
 
+/* Retirer outline focus */
 .navbar-toggler:focus {
   outline: none !important;
   box-shadow: none !important;
 }
+
 
 
 /* Limite la taille des images sur petits écrans */
