@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", function () {
     galerieContainer.innerHTML = "";
     for (let i = 0; i < limit && i < images.length; i++) {
       const img = document.createElement("img");
-      img.src = `/atelier-Alizarine/media/img/${images[i]}`;
+      img.src = `media/img/${images[i]}`;
       img.className = "img-thumbnail";
       img.alt = `Image ${i + 1}`;
 
