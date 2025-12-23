@@ -1,1 +1,1 @@
-Site web de l'association de Peintres L'atelier Alizarine de Poulx(30) - https://baouzjulien82.github.io/atelier-Alizarine/
+Site web de l'association l'atelier Alizarine - https://baouzjulien.github.io/atelier-alizarine/
